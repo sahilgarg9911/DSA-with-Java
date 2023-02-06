@@ -1,0 +1,19 @@
+Smaller elements
+static int smallerElements(int a[], int n, int k){
+
+
+        int start = 0;
+        int end = n-1;
+        int count = 0;
+        while (start <= end) {
+                int mid =( start + end )/2;
+                if(a[mid] <= k) {
+                        count = mid+1;
+                        start = mid+1;
+                } 
+                else {
+                        end = mid-1;
+                }
+        }
+        return count;
+}
